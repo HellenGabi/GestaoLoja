@@ -5,7 +5,7 @@ import org.springframework.validation.annotation.Validated;
 
 @Validated
 public record CategoriaRequisicao (
-        @NotBlank(message = "O nome informado está inválido!")
+        Long id, @NotBlank(message = "O nome informado está inválido!")
         String nome,
 
         @NotBlank(message = "A descricao informada está inválida!")

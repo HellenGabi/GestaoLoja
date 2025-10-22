@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +20,7 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "nome")
     private String nome;
 
     @Column(nullable = false)
@@ -26,8 +28,15 @@ public class Produto {
     private String descricao;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private double valor;
+    private BigDecimal valor;
 
    @Column(nullable = false)
     private int quantidade;
+
+    public Produto(String nome, String descricao, BigDecimal valor, int quantidade) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.valor = valor;
+        this.quantidade = quantidade;
+    }
 }

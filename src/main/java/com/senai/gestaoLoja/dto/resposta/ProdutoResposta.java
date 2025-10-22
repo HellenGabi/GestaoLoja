@@ -1,10 +1,12 @@
 package com.senai.gestaoLoja.dto.resposta;
 
+import java.math.BigDecimal;
+
 public record ProdutoResposta (
-        int id,
+        Long id,
         String nome,
         String descricao,
-        double preco,
+        BigDecimal preco,
         int quantidade
 ){
 

@@ -3,6 +3,8 @@ package com.senai.gestaoLoja.dto.requisicao;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.validation.annotation.Validated;
 
+import java.math.BigDecimal;
+
 @Validated
 public record ProdutoRequisicao(
 
@@ -10,10 +12,10 @@ public record ProdutoRequisicao(
     String nome,
 
     @NotBlank(message = "A descrição está inválida!")
-    String descicao,
+    String descricao,
 
     @NotBlank(message = "O preço está inválido!")
-    double preco,
+    BigDecimal valor,
 
     @NotBlank(message = "A quantidade está inválida!")
     int quantidade

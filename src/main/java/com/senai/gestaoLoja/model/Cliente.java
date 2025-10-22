@@ -29,4 +29,11 @@ public class Cliente {
 
     @Column(nullable = false, unique = true)
     private String cpf;
+
+    public Cliente(String nome, String email, String telefone, String cpf) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.cpf = cpf;
+    }
 }

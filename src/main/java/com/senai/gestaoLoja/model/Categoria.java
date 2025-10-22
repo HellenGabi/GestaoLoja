@@ -24,4 +24,10 @@ public class Categoria {
     @Column(nullable = false)
     @Lob
     private String descricao;
+
+
+    public Categoria(String nome, String descricao) {
+        this.nome = nome;
+        this.descricao = descricao;
+    }
 }

@@ -33,5 +33,11 @@ public class Fornecedor {
     @Column(nullable = false)
     private String telefone;
 
+    public Fornecedor(String nome, String cnpj, String email, String telefone) {
+        this.nome = nome;
+        this.cnpj = cnpj;
+        this.email = email;
+        this.telefone = telefone;
+    }
 }
 
